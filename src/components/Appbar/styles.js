@@ -1,0 +1,24 @@
+import styled from 'styled-components'
+
+export const Container = styled.div`
+  height: 80px;
+  display: flex;
+  background-color: #000000;
+  box-shadow: 0 0 10px 1px;
+  width: 1325px;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+
+  h1 {
+    color: #ffffff;
+    margin: 0;
+  }
+  > svg {
+    position: absolute;
+    left: 32px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+`
