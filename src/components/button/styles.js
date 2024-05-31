@@ -5,7 +5,7 @@ export const ButtonContainer = styled.button`
 
   height: 48px;
   border: 0;
-  border-radius: 80px;
+  border-radius: 10px;
   padding: 0 16px;
   width: 100%;
   color: ${({ theme }) => theme.contrast};

@@ -20,10 +20,12 @@ export const Form = styled.div`
     h3 {
       margin-bottom: 20px;
       font-size: 1.2rem;
+      font-family: 'Poppins';
     }
     p {
       line-height: 1.6;
       font-size: 1rem;
+      font-family: 'Poppins';
     }
   }
 `
@@ -35,7 +37,7 @@ export const Image = styled.img`
   border-radius: 50%;
   width: 400px;
   height: 400px;
-  border: 10px solid #1e90ff; /* Define uma borda dupla preta com espessura de 4px */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
-  padding: 1px; /* Espaçamento interno opcional para separar a imagem da borda */
+  border: 10px solid black;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 1px;
 `

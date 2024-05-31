@@ -25,7 +25,7 @@ export const Content = styled.div`
   }
 `
 export const Form = styled.div`
-  margin-top: 70px;
+  margin-top: 50px;
   gap: 200px;
   display: flex;
   flex-direction: row;
@@ -38,7 +38,18 @@ export const Image = styled.img`
 export const IconContainer = styled.div`
   margin-left: 900px;
   margin-top: -50px;
+
   h3 {
     margin-bottom: 5px;
+  }
+`
+export const IconContent = styled.div`
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h3 {
   }
 `

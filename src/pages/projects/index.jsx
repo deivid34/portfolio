@@ -14,7 +14,7 @@ export const Projects = () => {
       <Content>
         <Appbar />
         <Form>
-          <h1>Projetos</h1>
+          <h1>PROJETOS</h1>
           <div>
             <a
               href="https://github.com/deivid34/calculadora"

@@ -19,6 +19,11 @@ export const Form = styled.div`
     margin-bottom: 30px;
     font-family: 'Poppins';
     font-size: 50px;
+    background: linear-gradient(90deg, #1e90ff, #ff6347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 20px;
   }
   div {
     display: flex;

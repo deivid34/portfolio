@@ -1,10 +1,24 @@
 import React from 'react'
-import { Container, Content, Form, Image, IconContainer } from './styles'
+import {
+  Container,
+  Content,
+  Form,
+  Image,
+  IconContainer,
+  IconContent,
+} from './styles'
 import { Appbar } from '../../components/Appbar'
 import { Button } from '../../components/button'
 import pcImage from '../../assets/pc.png'
 import { IoLogoJavascript } from 'react-icons/io5'
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa'
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaWhatsapp,
+} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 import(
   'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'
@@ -48,6 +62,12 @@ export const Home = () => {
           <FaReact size={50} color="#114880" />
           <FaNodeJs size={50} color="green" />
         </IconContainer>
+        <IconContent>
+          <h3>Contrate-me:</h3>
+          <Link to="/contact">
+            <FaWhatsapp size={50} color="green" />
+          </Link>
+        </IconContent>
       </Content>
     </Container>
   )

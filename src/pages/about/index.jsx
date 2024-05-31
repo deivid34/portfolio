@@ -13,10 +13,10 @@ export const About = () => {
         <Form>
           <Image src={dedeImage} alt="DEDE" />
           <div>
-            <h1>sobre mim</h1>
+            <h1>SOBRE MIM</h1>
             <h3>
-              meu nome é Deivid,tenho 18 anos de idades, e estou ingressando na
-              area de TI.
+              MEU NOME É DEIVID,TENHO 18 ANOS DE IDADES, E ESTOU INGRESSANDO NA
+              AREA DE TI.
             </h3>
             <p>
               Me chamo Deivid Melega, tenho 18 anos e estou começando minha
