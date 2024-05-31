@@ -2,6 +2,8 @@ import React from 'react'
 import { Container, Content } from './styles'
 import { FaTimes, FaHome, FaUserAlt } from 'react-icons/fa'
 import { SidebarItem } from '../SidebarItem'
+import { Link } from 'react-router-dom'
+import { GrProjects } from 'react-icons/gr'
 
 export const Sidebar = ({ active }) => {
   const closeSidebar = () => {
@@ -12,8 +14,15 @@ export const Sidebar = ({ active }) => {
     <Container sidebar={active}>
       <FaTimes onClick={closeSidebar} />
       <Content>
-        <SidebarItem Icon={FaHome} Text="principal" />
-        <SidebarItem Icon={FaUserAlt} Text="sobre mim" />
+        <Link to="/" onClick={closeSidebar}>
+          <SidebarItem Icon={FaHome} Text="principal" />
+        </Link>
+        <Link to="/about" onClick={closeSidebar}>
+          <SidebarItem Icon={FaUserAlt} Text="sobre mim" />
+        </Link>
+        <Link to="/projects" onClick={closeSidebar}>
+          <SidebarItem Icon={GrProjects} Text="projetos" />
+        </Link>
       </Content>
     </Container>
   )

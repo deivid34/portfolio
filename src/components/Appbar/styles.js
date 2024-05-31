@@ -12,6 +12,8 @@ export const Container = styled.div`
   h1 {
     color: #ffffff;
     margin: 0;
+    font-family: 'Poppins';
+    font-size: 40px;
   }
   > svg {
     position: absolute;

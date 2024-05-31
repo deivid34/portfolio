@@ -1,10 +1,14 @@
 import React from 'react'
-import { Container, Content, Form, Image } from './styles'
+import { Container, Content, Form, Image, IconContainer } from './styles'
 import { Appbar } from '../../components/Appbar'
 import { Button } from '../../components/button'
 import pcImage from '../../assets/pc.png'
+import { IoLogoJavascript } from 'react-icons/io5'
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa'
 
-import '@fontsource/roboto'
+import(
+  'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'
+)
 export const Home = () => {
   return (
     <Container>
@@ -33,9 +37,17 @@ export const Home = () => {
             >
               <Button>github</Button>
             </a>
+            <Image src={pcImage} alt="PC" />
           </div>
-          <Image src={pcImage} alt="PC" />
         </Form>
+        <IconContainer>
+          <h3>Minhas tecnologias:</h3>
+          <IoLogoJavascript size={50} color="yellow" />
+          <FaHtml5 size={50} color="blue" />
+          <FaCss3Alt size={50} color="red" />
+          <FaReact size={50} color="#114880" />
+          <FaNodeJs size={50} color="green" />
+        </IconContainer>
       </Content>
     </Container>
   )

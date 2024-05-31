@@ -13,28 +13,32 @@ export const Content = styled.div`
   h1 {
     font-size: 50px;
 
-    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+
+    font-family: 'Poppins';
+  }
+  p {
+    font-size: 1rem;
   }
   button {
     margin-top: 10px;
   }
 `
 export const Form = styled.div`
-  margin-top: 100px;
+  margin-top: 70px;
   gap: 200px;
   display: flex;
   flex-direction: row;
-text-align:center;
-
-  div {
-    display: flex;
-    flex-direction: column;
-   margin-top:10px
-    gap: 10px;
-
-  
+  text-align: center;
 `
 
 export const Image = styled.img`
-  width: 400px;
+  width: 200px;
+`
+export const IconContainer = styled.div`
+  margin-left: 900px;
+  margin-top: -50px;
+  h3 {
+    margin-bottom: 5px;
+  }
 `
