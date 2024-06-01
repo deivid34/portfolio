@@ -15,7 +15,7 @@ export const Content = styled.div`
 
     font-weight: 700;
 
-    font-family: 'Poppins';
+    font-family: 'Poppins'; sans-serif;
   }
   p {
     font-size: 1rem;
@@ -36,8 +36,8 @@ export const Image = styled.img`
   width: 200px;
 `
 export const IconContainer = styled.div`
-  margin-left: 900px;
-  margin-top: -50px;
+  margin-left: 1050px;
+  margin-top: -10px;
 
   h3 {
     margin-bottom: 5px;
@@ -45,8 +45,8 @@ export const IconContainer = styled.div`
 `
 export const IconContent = styled.div`
   position: absolute;
-  bottom: 50px;
-  left: 50px;
+  bottom: 5px;
+  left: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;

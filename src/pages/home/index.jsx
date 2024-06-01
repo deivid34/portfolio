@@ -33,7 +33,7 @@ export const Home = () => {
           <div>
             <strong>
               <h1>
-                olá, eu sou <br /> Deivid Melega
+                Olá, eu sou <br /> Deivid Melega
               </h1>
             </strong>
             <p>Desenvolvedor fullstack</p>

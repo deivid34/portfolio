@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: 1325px;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-
+  z-index: 10;
   h1 {
     color: #ffffff;
     margin: 0;
