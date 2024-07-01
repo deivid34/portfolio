@@ -1,19 +1,20 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  height: 80px;
+  width: 100%;
   display: flex;
   background-color: #000000;
   box-shadow: 0 0 10px 1px;
-  width: 1325px;
+  height: 80px;
+
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
   z-index: 10;
   h1 {
     color: #ffffff;
     margin: 0;
-    font-family: 'Poppins';
-    font-size: 40px;
+    font-family: 'Pixelify Sans';
+    font-size: 70px;
   }
   > svg {
     position: absolute;

@@ -1,6 +1,8 @@
 export default {
-  primary: '#114880',
+  primary: ' #0b2447',
   primary_light: 'rgba(17,72,128,1)',
+  gradiant:
+    'linear-gradient(135deg, #000000, #333333, #ff0000, #ff6666, #ffffff)',
 
   secondary: '#6A8AA6',
   secondary_light: 'rgba(106,138,166,1)',

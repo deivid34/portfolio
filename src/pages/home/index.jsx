@@ -20,15 +20,11 @@ import {
 } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-import(
-  'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'
-)
 export const Home = () => {
   return (
     <Container>
       <Content>
         <Appbar />
-
         <Form>
           <div>
             <strong>
@@ -54,14 +50,18 @@ export const Home = () => {
             <Image src={pcImage} alt="PC" />
           </div>
         </Form>
+
         <IconContainer>
           <h3>Minhas tecnologias:</h3>
-          <IoLogoJavascript size={50} color="yellow" />
-          <FaHtml5 size={50} color="blue" />
-          <FaCss3Alt size={50} color="red" />
-          <FaReact size={50} color="#114880" />
-          <FaNodeJs size={50} color="green" />
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <IoLogoJavascript size={50} color="yellow" />
+            <FaHtml5 size={50} color="blue" />
+            <FaCss3Alt size={50} color="red" />
+            <FaReact size={50} color="#114880" />
+            <FaNodeJs size={50} color="green" />
+          </div>
         </IconContainer>
+
         <IconContent>
           <h3>Contrate-me:</h3>
           <Link to="/contact">

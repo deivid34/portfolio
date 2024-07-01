@@ -1,18 +1,16 @@
 import React from 'react'
-import { Container, Content, Form, Image } from './styles'
+import { Container, Content, Form, Image, IconContent } from './styles'
 import { Appbar } from '../../components/Appbar'
 import calculadora from '../../assets/calculadora.jpg'
 import jobfinder from '../../assets/jobfinder.jpg'
 import jogodavelha from '../../assets/jogodavelha.jpg'
 import spotlist from '../../assets/spotlist.jpg'
-import(
-  'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'
-)
+import { TbLock } from 'react-icons/tb'
 export const Projects = () => {
   return (
     <Container>
+      <Appbar />
       <Content>
-        <Appbar />
         <Form>
           <h1>PROJETOS</h1>
           <div>
@@ -45,6 +43,9 @@ export const Projects = () => {
               <Image src={spotlist} alt="Spotlist" />
             </a>
           </div>
+          <IconContent>
+            <TbLock size={50} />
+          </IconContent>
         </Form>
       </Content>
     </Container>

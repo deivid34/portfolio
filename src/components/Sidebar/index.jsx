@@ -4,6 +4,7 @@ import { FaTimes, FaHome, FaUserAlt, FaWhatsapp } from 'react-icons/fa'
 import { SidebarItem } from '../SidebarItem'
 import { Link } from 'react-router-dom'
 import { GrProjects } from 'react-icons/gr'
+import { GoRepo } from 'react-icons/go'
 
 export const Sidebar = ({ active }) => {
   const closeSidebar = () => {
@@ -25,6 +26,9 @@ export const Sidebar = ({ active }) => {
         </Link>
         <Link to="/contact" onClick={closeSidebar}>
           <SidebarItem Icon={FaWhatsapp} Text="contrate-me" />
+        </Link>
+        <Link to="/repositories" onClick={closeSidebar}>
+          <SidebarItem Icon={GoRepo} Text="repositorios" />
         </Link>
       </Content>
     </Container>
