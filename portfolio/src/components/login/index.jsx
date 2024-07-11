@@ -39,7 +39,7 @@ export const Login = ({ onLoginSuccess, onClose }) => {
       setMessage('Registrado com sucesso! Voce pode logar.')
       setIsRegistering(false)
     } catch (error) {
-      setMessage('Registro falho! Pode usar nome do usuário.')
+      setMessage('Registro falho!')
     }
     setLoading(false)
   }
