@@ -7,7 +7,6 @@ export const Login = ({ onLoginSuccess, onClose }) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState('')
-  const [isRegistering, setIsRegistering] = useState(false)
   const [loading, setLoading] = useState(false)
 
   const handleLogin = async () => {
@@ -37,7 +36,6 @@ export const Login = ({ onLoginSuccess, onClose }) => {
     try {
       await api.post('/auth/register', { username, password })
       setMessage('Registrado com sucesso! Voce pode logar.')
-      setIsRegistering(false)
     } catch (error) {
       setMessage('Registro falho!')
     }
@@ -53,7 +51,7 @@ export const Login = ({ onLoginSuccess, onClose }) => {
             onClick={onClose}
             style={{ cursor: 'pointer' }}
           />
-          <h1>{isRegistering ? 'Registrar' : 'Login'}</h1>
+          <h1>{'Login'}</h1>
           <Input
             type="text"
             placeholder="Nome"
@@ -66,18 +64,10 @@ export const Login = ({ onLoginSuccess, onClose }) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          {isRegistering ? (
-            <Button onClick={handleRegister} disabled={loading}>
-              {loading ? 'Registrando...' : 'registrar'}
-            </Button>
-          ) : (
-            <Button onClick={handleLogin} disabled={loading}>
-              {loading ? 'Logando o...' : 'Login'}
-            </Button>
-          )}
-          <Button onClick={() => setIsRegistering(!isRegistering)}>
-            {isRegistering ? 'Tem conta? Logar' : 'Criar uma conta'}
+          <Button onClick={handleLogin} disabled={loading}>
+            {loading ? 'Logando...' : 'Login'}
           </Button>
+          <Button onClick={handleRegister}>{'Criar uma conta'}</Button>
           {message && <p>{message}</p>}
         </Form>
       </Content>
