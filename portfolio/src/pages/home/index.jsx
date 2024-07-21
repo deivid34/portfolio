@@ -65,7 +65,7 @@ export const Home = () => {
         <IconContent>
           <h3>Contrate-me:</h3>
           <Link to="/contact">
-            <FaWhatsapp size={50} color="green" />
+            <FaWhatsapp size={50} color="purple" />
           </Link>
         </IconContent>
       </Content>

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   text-align: center;
   position: relative; /* Adiciona posição relativa para o container */
-  background: ${({ theme }) => theme.gradiant};
+  background: ${({ theme }) => theme.primary};
   background-size: cover; /* Faz com que o background cubra todo o container */
   background-repeat: no-repeat; /* Evita repetição do background */
 `
@@ -24,13 +24,13 @@ export const Content = styled.div`
     font-size: 50px;
     font-family: 'Pixelify Sans', 
     font-weight: 700;
-  
+  color: ${({ theme }) => theme.text};
   
   }
 
   p {
     font-size: 1rem;
-
+color: ${({ theme }) => theme.text};
   }
 
   button {
@@ -40,6 +40,7 @@ export const Content = styled.div`
    @media (max-width: 768px) {
     h1 {
       font-size: 2rem;
+      
     }
 
     p {
@@ -72,8 +73,21 @@ export const Form = styled.div`
   }
 `
 
+const pulse = keyframes`
+
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+`
 export const Image = styled.img`
   width: 200px;
+  animation: ${pulse} 1s infinite;
 
   @media (max-width: 768px) {
     width: 150px;
@@ -93,6 +107,7 @@ export const IconContainer = styled.div`
   align-items: center; /* Centraliza os itens dentro do container */
   h3 {
     margin-bottom: 5px;
+    color: ${({ theme }) => theme.text};
   }
 
   @media (max-width: 768px) {
@@ -116,6 +131,7 @@ export const IconContent = styled.div`
 
   h3 {
     margin-bottom: 5px;
+    color: ${({ theme }) => theme.text};
   }
 
   @media (max-width: 768px) {

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ButtonContainer = styled.button`
-  background: #b22222;
+  background: ${({ theme }) => theme.secondary};
 
   height: 48px;
   border: 0;

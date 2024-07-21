@@ -1,16 +1,16 @@
 export default {
-  primary: ' #0b2447',
+  primary: ' #020617',
   primary_light: 'rgba(17,72,128,1)',
   gradiant:
     'linear-gradient(135deg, #000000, #333333, #ff0000, #ff6666, #ffffff)',
 
-  secondary: '#6A8AA6',
+  secondary: '#3730a3',
   secondary_light: 'rgba(106,138,166,1)',
 
-  text: '#0D0D0D',
+  text: '#fff',
   background: '#333',
   contrast: '#fff',
-  gray: '#999',
+  gray: '#030712',
   black: '#000000',
 
   shadow: '0 0 10px rgb(255, 255, 255, 0.5)',

@@ -3,8 +3,9 @@ import { Container, Content } from './styles'
 import { FaTimes, FaHome, FaUserAlt, FaWhatsapp } from 'react-icons/fa'
 import { SidebarItem } from '../SidebarItem'
 import { Link } from 'react-router-dom'
-import { GrProjects } from 'react-icons/gr'
+import { GrProjects, GrCertificate } from 'react-icons/gr'
 import { GoRepo } from 'react-icons/go'
+import { MdOutlineFeedback } from 'react-icons/md'
 
 export const Sidebar = ({ active }) => {
   const closeSidebar = () => {
@@ -29,6 +30,12 @@ export const Sidebar = ({ active }) => {
         </Link>
         <Link to="/repositories" onClick={closeSidebar}>
           <SidebarItem Icon={GoRepo} Text="repositorios" />
+        </Link>
+        <Link to="/certificate" onClick={closeSidebar}>
+          <SidebarItem Icon={GrCertificate} Text="certificado" />
+        </Link>
+        <Link to="/feedback" onClick={closeSidebar}>
+          <SidebarItem Icon={MdOutlineFeedback} Text="análise" />
         </Link>
       </Content>
     </Container>

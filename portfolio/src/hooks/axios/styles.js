@@ -3,9 +3,10 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   width: 100%;
+  height: 100vh;
 
   flex-direction: column;
-  background: ${({ theme }) => theme.gradiant};
+
   align-items: center;
   justify-content: center;
 
@@ -19,13 +20,13 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 1100px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   h1 {
     color: Black;
+    color: ${({ theme }) => theme.text};
   }
 `
 

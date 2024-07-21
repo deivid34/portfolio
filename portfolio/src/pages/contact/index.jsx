@@ -4,6 +4,8 @@ import { Input } from '../../components/input'
 import { Button } from '../../components/button'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { toast } from 'react-toastify'
+
 export const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -14,7 +16,7 @@ export const Contact = () => {
     e.preventDefault()
 
     if (name === '' || email === '' || number === '' || message === '') {
-      alert('Preencha todos os campos')
+      toast.error('Preencha todos os campos')
       return
     }
 
@@ -39,11 +41,12 @@ export const Contact = () => {
           setEmail('')
           setNumber('')
           setMessage('')
+          toast.success('Email enviado com sucesso!')
         },
         (err) => {
           console.log('ERRO: ', err)
+          toast.error('Erro ao enviar email')
         },
-        alert('enviado com sucesso'),
       )
   }
 

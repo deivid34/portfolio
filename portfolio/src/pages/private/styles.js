@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background: ${({ theme }) => theme.gradiant};
+  background: ${({ theme }) => theme.primary};
   width: 100%;
   height: 100vh;
   text-align: center;
@@ -18,10 +18,8 @@ export const Form = styled.div`
   margin-top: 2rem;
   h1 {
     font-size: 90px;
-    background: linear-gradient(90deg, #333333, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+      color: ${({ theme }) => theme.text};
+   
 `
 
 export const Image = styled.div`

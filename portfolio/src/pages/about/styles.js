@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background: ${({ theme }) => theme.gradiant};
+  background: ${({ theme }) => theme.primary};
   width: 100%;
   height: 100vh;
 `
@@ -49,6 +49,7 @@ export const Form = styled.div`
       margin-bottom: 15px;
       font-size: 50px;
       font-family: 'Poppins';
+      color: ${({ theme }) => theme.text};
 
       @media (max-width: 1024px) {
         font-size: 40px;
@@ -67,6 +68,7 @@ export const Form = styled.div`
       margin-bottom: 20px;
       font-size: 1.2rem;
       font-family: 'Poppins';
+      color: ${({ theme }) => theme.text};
 
       @media (max-width: 1024px) {
         font-size: 1rem;
@@ -85,6 +87,7 @@ export const Form = styled.div`
       line-height: 1.6;
       font-size: 1.1rem;
       font-family: 'Poppins';
+      color: ${({ theme }) => theme.text};
 
       @media (max-width: 1024px) {
         font-size: 1rem;
@@ -108,7 +111,7 @@ export const Image = styled.img`
   border-radius: 50%;
   width: 450px;
   height: 450px;
-  border: 10px solid black;
+  border: 10px solid #3730a3;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 
   animation-name: floating;

@@ -1,7 +1,16 @@
 import { Routes, Route } from 'react-router-dom'
 import React from 'react'
 
-import { Home, About, Projects, Contact, Repositories, Private } from '../pages'
+import {
+  Home,
+  About,
+  Projects,
+  Contact,
+  Repositories,
+  Private,
+  Certificate,
+  Feedback,
+} from '../pages'
 
 export const AppRoutes = () => {
   return (
@@ -12,6 +21,8 @@ export const AppRoutes = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/repositories" element={<Repositories />} />
       <Route path="/private" element={<Private />} />
+      <Route path="/certificate" element={<Certificate />} />
+      <Route path="/feedback" element={<Feedback />} />
     </Routes>
   )
 }

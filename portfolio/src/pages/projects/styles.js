@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background: ${({ theme }) => theme.gradiant};
+  background: ${({ theme }) => theme.primary};
   width: 100%;
   height: 100vh;
 `
@@ -24,9 +24,7 @@ export const Form = styled.div`
     margin-bottom: 30px;
 
     font-size: 70px;
-    background: linear-gradient(90deg, #333333, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: ${({ theme }) => theme.text};
 
     margin-bottom: 20px;
 
@@ -71,7 +69,7 @@ export const Image = styled.img`
 `
 
 export const IconContent = styled.div`
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: ${({ theme }) => theme.secondary};
   border-radius: 50px;
   padding: 5px;
   margin-top: 50px;

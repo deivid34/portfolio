@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 export const Container = styled.div`
-  background: ${({ theme }) => theme.gradiant};
+  background: ${({ theme }) => theme.primary};
   width: 100%;
   height: 100vh;
 `
@@ -36,6 +36,7 @@ export const Form = styled.form`
     margin-bottom: 30px;
     font-size: 50px;
     font-family: 'Poppins';
+    color: ${({ theme }) => theme.text};
 
     @media (max-width: 768px) {
       font-size: 40px;
