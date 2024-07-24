@@ -1,19 +1,29 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "author": {
+        "avatarUrl": "https://github.com/robighetti.png",
+        "name": "Rodrigo Bighetti",
+        "role": "Fullstack Developer"
+      },
+      "publishedAt": "2024-07-23T21:37:30.669Z",
+      "content": [],
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "author": {
+        "avatarUrl": "https://github.com/robighetti.png",
+        "name": "Rodrigo Bighetti",
+        "role": "Fullstack Developer"
+      },
+      "publishedAt": "2024-07-24T00:40:16.547Z",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "jo"
+        }
+      ],
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
