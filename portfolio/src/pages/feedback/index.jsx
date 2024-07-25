@@ -1,7 +1,6 @@
-import { Container, Form, Main } from './styles'
-
+import { Container, Form } from './styles'
+import { Appbar } from '../../components/Appbar'
 import { useState, useEffect } from 'react'
-
 import { Post } from '../../components/post/Post'
 import { Frame } from '../../components/frame/Frame'
 import { api } from '../../services'
@@ -31,7 +30,7 @@ export const Feedback = () => {
   const extrairSemHashtags = (texto) => {
     const regexHashtag = /#[a-zA-Z0-9_]+/g
     const partesSemHashtags = texto.split(regexHashtag)
-    return partesSemHashtags.filter(Boolean) // Filtra os valores vazios e retorna apenas os valores válidos
+    return partesSemHashtags.filter(Boolean)
   }
 
   const handleSubmit = async (event) => {
@@ -51,7 +50,7 @@ export const Feedback = () => {
         name: 'Rodrigo Bighetti',
         role: 'Fullstack Developer',
       },
-      publishedAt: new Date(),
+      publishedAt: new Date().toISOString(),
       content: [...paragraphs, ...links],
     }
 
@@ -71,9 +70,10 @@ export const Feedback = () => {
   return (
     <div>
       <Container>
+        <Appbar />
         <Frame />
 
-        <Main>
+        <main>
           <Form onSubmit={handleSubmit}>
             <strong>Deixe seu feedback</strong>
 
@@ -98,7 +98,7 @@ export const Feedback = () => {
               postId={post.id}
             />
           ))}
-        </Main>
+        </main>
       </Container>
     </div>
   )

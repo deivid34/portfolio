@@ -1,66 +1,57 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable array-callback-return */
-import { useState, useEffect } from 'react'
-import { format, formatDistanceToNow } from 'date-fns'
+import React from 'react'
+import { format, formatDistanceToNow, isValid } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 
 import { Avatar } from '../avatar/Avatar'
-import { api } from '../../services'
+import { Article, Header, Author, Content } from './styles'
 
-import { Author, Article, Header, Content } from './styles'
-
-export function Post(props) {
-  const { author, content, publishedAt, postId } = props
-
-  const [setComments] = useState([])
-
-  const publishedAtFormated = format(publishedAt, "d 'de' LLLL 'de' yyyy", {
-    locale: ptBR,
-  })
-
-  const distanceFromNowFormated = formatDistanceToNow(publishedAt, {
-    locale: ptBR,
-    addSuffix: true,
-  })
-
-  const getComments = async () => {
-    const { data } = await api.get(
-      `/comments?postId=${postId}&_sort=createdAt&_order=desc`,
-    )
-    setComments(data)
+export function Post({ author, content, publishedAt }) {
+  const formatDate = (date) => {
+    const parsedDate = new Date(date)
+    return isValid(parsedDate)
+      ? format(parsedDate, "d 'de' LLLL 'de' yyyy", { locale: ptBR })
+      : 'Data inválida'
   }
 
-  useEffect(() => {
-    getComments()
-  }, [])
+  const formatDistance = (date) => {
+    const parsedDate = new Date(date)
+    return isValid(parsedDate)
+      ? formatDistanceToNow(parsedDate, { locale: ptBR, addSuffix: true })
+      : 'Data inválida'
+  }
+
+  const formattedPublishedAt = formatDate(publishedAt)
+  const distanceFromNow = formatDistance(publishedAt)
 
   return (
     <Article>
       <Header>
-        <Author test={true}>
+        <Author>
           <Avatar hasBorder={true} src={author.avatarUrl} />
-
           <div>
             <strong>{author.name}</strong>
+            <time
+              title={formattedPublishedAt}
+              dateTime={new Date(publishedAt).toISOString()}
+            >
+              {distanceFromNow}
+            </time>
           </div>
         </Author>
-
-        <time title={publishedAtFormated} dateTime="2024-05-14 08:00:00">
-          {distanceFromNowFormated}
-        </time>
       </Header>
 
       <Content>
-        {content.map((line) => {
+        {content.map((line, index) => {
           if (line.type === 'paragraph') {
-            return <p key={Math.random()}>{line.content}</p>
+            return <p key={index}>{line.content}</p>
           } else if (line.type === 'link') {
             return (
-              <p key={Math.random()}>
+              <p key={index}>
                 <a href="#">{line.content}</a>
               </p>
             )
           }
+          return null
         })}
       </Content>
     </Article>

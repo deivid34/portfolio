@@ -53,6 +53,6 @@ export const Form = styled.form`
 
   footer {
     visibility: visible;
-    max-height: 100%;
+    max-height: 0;
   }
 `
