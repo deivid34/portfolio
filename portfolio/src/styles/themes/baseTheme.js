@@ -1,11 +1,13 @@
 export default {
-  primary: ' #020617',
+  primary: ' #030712',
   primary_light: 'rgba(17,72,128,1)',
   gradiant:
     'linear-gradient(135deg, #000000, #333333, #ff0000, #ff6666, #ffffff)',
 
-  secondary: '#3730a3',
+  secondary: '#1e1b4b',
   secondary_light: 'rgba(106,138,166,1)',
+
+  third: '#0f172a',
 
   text: '#fff',
   background: '#333',

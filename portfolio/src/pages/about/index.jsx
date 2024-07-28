@@ -2,9 +2,7 @@ import React from 'react'
 import { Container, Content, Form, Image } from './styles'
 import { Appbar } from '../../components/Appbar'
 import dedeImage from '../../assets/dede.jpg'
-import(
-  'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'
-)
+
 export const About = () => {
   return (
     <Container>

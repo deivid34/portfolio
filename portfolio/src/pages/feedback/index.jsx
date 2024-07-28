@@ -1,8 +1,9 @@
 import { Container, Form } from './styles'
-import { Appbar } from '../../components/Appbar'
+
 import { useState, useEffect } from 'react'
 import { Post } from '../../components/post/Post'
 import { Frame } from '../../components/frame/Frame'
+import { Appbar } from '../../components/Appbar'
 import { api } from '../../services'
 
 export const Feedback = () => {
@@ -46,8 +47,8 @@ export const Feedback = () => {
 
     const payload = {
       author: {
-        avatarUrl: 'https://github.com/robighetti.png',
-        name: 'Rodrigo Bighetti',
+        avatarUrl: 'https://github.com/deivid34.png',
+        name: 'deivid',
         role: 'Fullstack Developer',
       },
       publishedAt: new Date().toISOString(),
@@ -69,8 +70,8 @@ export const Feedback = () => {
 
   return (
     <div>
+      <Appbar />
       <Container>
-        <Appbar />
         <Frame />
 
         <main>

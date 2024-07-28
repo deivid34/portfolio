@@ -7,23 +7,30 @@ export const Author = styled.div`
 `
 
 export const Article = styled.div`
-  background: var(--gray-800);
+  background: ${({ theme }) => theme.third};
   border-radius: 8px;
-  padding: 2.5rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  max-width: 60rem;
+  border: 5px solid #3730a3;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-left: 15rem;
 `
 
 export const Content = styled.div`
   line-height: 1.6rem;
   color: var(--gray-300);
-  margin-top: 1.5rem;
+
+  color: ${({ theme }) => theme.text};
   p {
     margin-top: 1rem;
   }
   a {
     font-weight: bold;
-    color: var(--pink-300);
+
     text-decoration: none;
     cursor: pointer;
+    color: ${({ theme }) => theme.text};
   }
 `
 
@@ -33,12 +40,13 @@ export const Header = styled.div`
   justify-content: space-between;
   div {
     display: block;
-    color: var(--gray-100);
+
     line-height: 1.6rem;
+    color: ${({ theme }) => theme.text};
   }
   time {
     font-size: 0.875rem;
-    color: var(--gray-400);
+    color: ${({ theme }) => theme.text};
   }
   strong {
     display: block;

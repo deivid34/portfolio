@@ -11,9 +11,9 @@ export function Frame() {
       />
 
       <div>
-        <Avatar hasBorder src="https://github.com/robighetti.png" />
+        <Avatar hasBorder src="https://github.com/deivid34.png" />
 
-        <strong>Rodrigo Bighetti</strong>
+        <strong>Deivid</strong>
       </div>
 
       <Footer>

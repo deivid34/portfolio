@@ -5,6 +5,9 @@ export const Aside = styled.div`
   border-radius: 8px;
   overflow: hidden;
 
+  margin-top: 5rem;
+  margin-left: 2rem;
+  background: ${({ theme }) => theme.third};
   div {
     display: flex;
     flex-direction: column;
@@ -13,8 +16,9 @@ export const Aside = styled.div`
   }
   strong {
     margin-top: 0.875rem;
-    color: var(--gray-400);
-    line-height: 1.6rem;
+    margin-bottom: 1px;
+    line-height: 2rem;
+    color: ${({ theme }) => theme.text};
   }
 `
 
@@ -25,20 +29,19 @@ export const Image = styled.img`
 `
 
 export const Footer = styled.div`
-  border-top: 1px solid var(--gray-600);
-  margin-top: 1.5rem;
   padding: 1.5rem 2rem 2rem;
+  color: ${({ theme }) => theme.text};
+
   a {
-    background: transparent;
-    color: var(--pink-500);
-    border: 1px solid var(--pink-500);
+    background: ${({ theme }) => theme.primary};
+
     border-radius: 8px;
     height: 50px;
-    padding: 0 1.5rem;
+    padding: 2rem;
     font-weight: bold;
     display: block;
     text-decoration: none;
-
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
