@@ -1,5 +1,4 @@
 import { Container, Form } from './styles'
-
 import { useState, useEffect } from 'react'
 import { Post } from '../../components/post/Post'
 import { Frame } from '../../components/frame/Frame'
@@ -9,6 +8,11 @@ import { api } from '../../services'
 export const Feedback = () => {
   const [posts, setPosts] = useState([])
   const [inputValue, setInputValue] = useState('')
+  const [currentUser, setCurrentUser] = useState({
+    avatarUrl: 'https://github.com/deivid34.png',
+    name: 'Deivid',
+    role: 'Fullstack Developer',
+  })
 
   const getPostsFromApi = async () => {
     try {
@@ -47,9 +51,9 @@ export const Feedback = () => {
 
     const payload = {
       author: {
-        avatarUrl: 'https://github.com/deivid34.png',
-        name: 'deivid',
-        role: 'Fullstack Developer',
+        avatarUrl: currentUser.avatarUrl,
+        name: currentUser.name,
+        role: currentUser.role,
       },
       publishedAt: new Date().toISOString(),
       content: [...paragraphs, ...links],
@@ -64,6 +68,10 @@ export const Feedback = () => {
     }
   }
 
+  const handleUpdateProfile = (updatedUser) => {
+    setCurrentUser(updatedUser)
+  }
+
   useEffect(() => {
     getPostsFromApi()
   }, [])
@@ -72,7 +80,10 @@ export const Feedback = () => {
     <div>
       <Appbar />
       <Container>
-        <Frame />
+        <Frame
+          currentUser={currentUser}
+          onUpdateProfile={handleUpdateProfile}
+        />
 
         <main>
           <Form onSubmit={handleSubmit}>

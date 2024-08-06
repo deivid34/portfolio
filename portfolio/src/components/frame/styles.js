@@ -14,7 +14,7 @@ export const Aside = styled.div`
     align-items: center;
     margin-top: calc(0px - 1.5rem - 6px);
   }
-  strong {
+  h3 {
     margin-top: 0.875rem;
     margin-bottom: 1px;
     line-height: 2rem;
@@ -28,10 +28,20 @@ export const Image = styled.img`
   object-fit: cover;
 `
 
+export const FormInput = styled.input`
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+`
+
 export const Footer = styled.div`
   padding: 1.5rem 2rem 2rem;
   color: ${({ theme }) => theme.text};
-
+  input {
+    background: ${({ theme }) => theme.text};
+  }
   a {
     background: ${({ theme }) => theme.primary};
 
@@ -51,5 +61,10 @@ export const Footer = styled.div`
     transition:
       color 0.2s,
       background 0.2s;
+  }
+  label {
+    display: flex;
+    gap: 5px;
+    align-items: center;
   }
 `

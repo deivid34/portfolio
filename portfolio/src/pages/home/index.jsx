@@ -1,4 +1,5 @@
 import React from 'react'
+
 import {
   Container,
   Content,
@@ -23,8 +24,8 @@ import { Link } from 'react-router-dom'
 export const Home = () => {
   return (
     <Container>
+      <Appbar />
       <Content>
-        <Appbar />
         <Form>
           <div>
             <strong>
@@ -32,20 +33,21 @@ export const Home = () => {
                 Olá, eu sou <br /> Deivid Melega
               </h1>
             </strong>
+
             <p>Desenvolvedor fullstack</p>
             <a
               href="https://www.linkedin.com/in/deivid-melega/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button>linkedin</Button>
+              <Button>LinkedIn</Button>
             </a>
             <a
               href="https://github.com/deivid34"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button>github</Button>
+              <Button>GitHub</Button>
             </a>
             <Image src={pcImage} alt="PC" />
           </div>

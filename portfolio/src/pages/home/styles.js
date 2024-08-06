@@ -105,6 +105,7 @@ export const IconContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center; /* Centraliza os itens dentro do container */
+  box-shadow: 10px 10px 10px -10px ${({ theme }) => theme.text};
   h3 {
     margin-bottom: 5px;
     color: ${({ theme }) => theme.text};

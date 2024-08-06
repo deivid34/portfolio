@@ -6,12 +6,12 @@ import { Sidebar } from '../Sidebar'
 export const Appbar = () => {
   const [sidebar, setSidebar] = useState(false)
 
-  const showSiderbar = () => setSidebar(!sidebar)
+  const showSidebar = () => setSidebar(!sidebar)
 
   return (
     <Container>
-      <FaBars onClick={showSiderbar} />
-      <h1> Portfolio</h1>
+      <FaBars onClick={showSidebar} />
+      <h1>Portfolio</h1>
       {sidebar && <Sidebar active={setSidebar} />}
     </Container>
   )

@@ -3,13 +3,13 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100%;
   display: flex;
-  background-color: #3730a3;
+  background: ${({ theme }) => theme.secondary};
   box-shadow: 0 0 10px 1px;
   height: 90px;
-
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
   z-index: 10;
+  box-shadow: 1px 1px 1px 1px ${({ theme }) => theme.text};
   h1 {
     color: #ffffff;
     margin: 0;

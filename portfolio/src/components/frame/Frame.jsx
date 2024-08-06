@@ -1,8 +1,23 @@
 import { PencilLine } from 'phosphor-react'
+import React, { useState } from 'react'
 import { Aside, Image, Footer } from './styles'
 import { Avatar } from '../avatar/Avatar'
 
-export function Frame() {
+export const Frame = ({ currentUser, onUpdateProfile }) => {
+  const [avatarUrl, setAvatarUrl] = useState(currentUser?.avatarUrl || '')
+
+  const handleAvatarChange = (event) => {
+    const file = event.target.files[0]
+    if (file) {
+      const reader = new FileReader()
+      reader.onload = () => {
+        setAvatarUrl(reader.result)
+        onUpdateProfile({ ...currentUser, avatarUrl: reader.result })
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+
   return (
     <Aside>
       <Image
@@ -11,16 +26,24 @@ export function Frame() {
       />
 
       <div>
-        <Avatar hasBorder src="https://github.com/deivid34.png" />
-
-        <strong>Deivid</strong>
+        <Avatar
+          hasBorder
+          src={avatarUrl || 'https://github.com/deivid34.png'}
+        />
+        <h3>{currentUser?.name}</h3>
       </div>
 
       <Footer>
-        <a href="#">
+        <label>
+          <h3>Escolher Perfil</h3>
           <PencilLine size={20} />
-          Editar seu Perfil
-        </a>
+          <input
+            id="fileInput"
+            type="file"
+            onChange={handleAvatarChange}
+            style={{ display: 'none' }}
+          />
+        </label>
       </Footer>
     </Aside>
   )

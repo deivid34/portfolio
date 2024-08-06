@@ -1,9 +1,8 @@
 import React from 'react'
-import { format, formatDistanceToNow, isValid } from 'date-fns'
-import ptBR from 'date-fns/locale/pt-BR'
-
 import { Avatar } from '../avatar/Avatar'
 import { Article, Header, Author, Content } from './styles'
+import { format, formatDistanceToNow, isValid } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
 
 export function Post({ author, content, publishedAt }) {
   const formatDate = (date) => {

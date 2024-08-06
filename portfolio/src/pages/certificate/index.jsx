@@ -114,7 +114,6 @@ export function Certificate() {
                 onClick={handleNext}
                 disabled={activeStep === maxSteps - 1}
               >
-                Proximo
                 {theme.direction === 'rtl' ? (
                   <KeyboardArrowLeft />
                 ) : (
@@ -133,7 +132,6 @@ export function Certificate() {
                 ) : (
                   <KeyboardArrowLeft />
                 )}
-                voltar
               </Button>
             }
           />

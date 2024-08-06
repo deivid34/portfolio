@@ -1,5 +1,7 @@
-export default {
-  primary: ' #030712',
+// src/styles/themes/baseTheme.js
+
+const theme = {
+  primary: '#030712',
   primary_light: 'rgba(17,72,128,1)',
   gradiant:
     'linear-gradient(135deg, #000000, #333333, #ff0000, #ff6666, #ffffff)',
@@ -18,7 +20,6 @@ export default {
   shadow: '0 0 10px rgb(255, 255, 255, 0.5)',
 
   success_title: '#2e656a',
-
   success_background: '#e6fffa',
 
   info_title: '#3172b7',
@@ -30,3 +31,5 @@ export default {
   error_title: '#c53030',
   error_background: '#fddede',
 }
+
+export default theme

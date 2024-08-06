@@ -9,13 +9,6 @@ export const Container = styled.div`
 
   align-items: center;
   justify-content: center;
-
-  h1 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 50px;
-    color: #fff;
-  }
 `
 
 export const Content = styled.div`
@@ -25,8 +18,12 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   h1 {
+    margin-top: -200px;
     color: Black;
     color: ${({ theme }) => theme.text};
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 20px;
   }
 `
 
