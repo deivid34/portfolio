@@ -12,6 +12,8 @@
     "@mui/x-data-grid": "^6.18.1",
     "@unform/core": "^2.1.6",
     "@unform/web": "^2.1.6",
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0",
     "axios": "^1.7.2",
     "build": "^0.1.4",
     "react": "^18.2.0",
