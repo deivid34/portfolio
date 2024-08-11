@@ -9,13 +9,20 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '16.x' # Ajuste para a versão do Node.js que você está usando
+    versionSpec: '16.x' 
   displayName: 'Install Node.js'
 
 - script: |
+    node -v
+    npm -v
     npm install --legacy-peer-deps
     npm run build
   displayName: 'Install dependencies and build'
+  
+- script: |
+    echo "Build folder contents:"
+    ls -al build
+  displayName: 'List build directory contents'
 
 - task: PublishBuildArtifacts@1
   inputs:
