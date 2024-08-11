@@ -14,26 +14,48 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+    strategy:
+      fail-fast: false
+      max-parallel: 1
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Certifique-se de usar a versão correta do Node.js para o seu projeto
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Debug Build Environment
+        run: |
+          echo "NODE_VERSION=$(node -v)"
+          echo "NPM_VERSION=$(npm -v)"
+          echo "OS=$(uname -a)"
+          echo "Available Disk Space:"
+          df -h
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AGREEABLE_CLIFF_0E1B2CE0F }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "./portfolio" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "build" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
+          app_location: "./portfolio"
+          api_location: ""
+          output_location: "build"
+
+      - name: Clear Node.js Cache (if deploy fails)
+        if: failure()
+        run: npm cache clean --force
 
   close_pull_request_job:
+    needs: build_and_deploy_job
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close Pull Request Job
